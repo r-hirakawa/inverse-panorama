@@ -8,15 +8,19 @@
   </head>
   <body>
     <a-scene>
-      <a-sky src="./pano_diotima.jpg" rotation="0 -130 0"></a-sky>
 
-      <a-text
-        font="kelsonsans"
-        value="Puy de Sancy, France"
-        width="6"
-        position="-2.5 0.25 -1.5"
-        rotation="0 15 0"
-      ></a-text>
+      <a-assets>
+        <img id="texture" src="./pano_diotima.jpg" crossorigin="anonymous" />
+      </a-assets>
+
+      <a-sky color="#FFFFFF"></a-sky>
+
+      <a-cylinder
+        radius = "0.5" height = "1.5"
+        position = " 1 0.75 -3"
+        material = "src: #texture; repeat: 4 2;">
+      </a-cylinder>
+
     </a-scene>
   </body>
 </html>
